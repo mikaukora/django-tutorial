@@ -17,7 +17,8 @@ env = environ.Env()
 # reading .env file
 environ.Env.read_env()
 
-# Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
+# Raises django's ImproperlyConfigured exception if SECRET_KEY not
+# in os.environ
 SECRET_KEY = env("SECRET_KEY")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -91,16 +92,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.\
+            UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.\
+            MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.\
+            CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.\
+            NumericPasswordValidator',
     },
 ]
 
